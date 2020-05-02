@@ -33,4 +33,4 @@ So, we take that one line code -Without a string-
 
 ![image](https://user-images.githubusercontent.com/44063862/80861925-13a00200-8ca4-11ea-806e-95ab5e5eb94f.png)
 
-_*Flag: uniklctf20{$sql = "SELECT PostDetails FROM tblposts WHERE PostTitle='$searchtitle'";}*_
+_**Flag: uniklctf20{$sql = "SELECT PostDetails FROM tblposts WHERE PostTitle='$searchtitle'";}**_
