@@ -1,0 +1,36 @@
+![image](https://user-images.githubusercontent.com/44063862/80861811-5f05e080-8ca3-11ea-8b60-b97ff0c4f405.png)
+
+First questions for web is News Portal for 20 marks. The downloaded files give us a website file and sql file.
+
+So, I upload the sql file into phpMyAdmin.
+
+![image](https://user-images.githubusercontent.com/44063862/80861852-bf951d80-8ca3-11ea-84f8-d733cd809c76.png)
+
+We are present with this website.
+
+![image](https://user-images.githubusercontent.com/44063862/80861854-c459d180-8ca3-11ea-9c50-201ad218f875.png)
+
+Hint that they give us is 
+• Critical vulnerabilities
+
+We see there is search box. 
+What were we waiting for? 
+Go for SQL Injection or XSS of course. 
+Search for SQL Injection code cheat sheet. (I use very simple one, ' or '1'='1)
+
+![image](https://user-images.githubusercontent.com/44063862/80861871-ed7a6200-8ca3-11ea-996e-2f745d7a77ad.png)
+
+![image](https://user-images.githubusercontent.com/44063862/80861873-f0755280-8ca3-11ea-8b40-3565f781b7b6.png)
+
+Here we present the critical vulnerabilities :
+![image](https://user-images.githubusercontent.com/44063862/80861877-f4a17000-8ca3-11ea-8e13-eace2b8e8bf5.png)
+
+Without wasting time, we find the source code and find where SQL called for the text box.
+
+![image](https://user-images.githubusercontent.com/44063862/80861921-100c7b00-8ca4-11ea-8afa-dec76fe1c373.png)
+
+So, we take that one line code -Without a string-
+
+![image](https://user-images.githubusercontent.com/44063862/80861925-13a00200-8ca4-11ea-806e-95ab5e5eb94f.png)
+
+_*Flag: uniklctf20{$sql = "SELECT PostDetails FROM tblposts WHERE PostTitle='$searchtitle'";}*_
